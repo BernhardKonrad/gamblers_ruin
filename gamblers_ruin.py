@@ -20,6 +20,7 @@ def simulate_one(initial, successA):
         moneyB: history of bankroll of player B (list)
     '''
 
+    #Bananas
     moneyA = [initial]
 
     while moneyA[-1] > 0 and moneyA[-1] < 2 * initial:
