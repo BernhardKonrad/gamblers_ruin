@@ -1,15 +1,14 @@
 # Simulate gamblers ruin
 from random import random
 
-moneyA = [10]
-moneyB = [10]
+initial = 10
+moneyA = [initial]
 
-while moneyA[-1] > 0 and moneyB[-1] > 0:
+while moneyA[-1] > 0 and moneyA[-1] < 2 * initial:
     if random() < 0.5:
         moneyA.append(moneyA[-1] + 1)
-        moneyB.append(moneyB[-1] - 1)
     else:
         moneyA.append(moneyA[-1] - 1)
-        moneyB.append(moneyB[-1] + 1)
 
+moneyB = [2 * initial - m for m in moneyA]
 print moneyA, moneyB
