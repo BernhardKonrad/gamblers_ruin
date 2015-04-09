@@ -21,6 +21,7 @@ def simulate_one(initial, successA):
     '''
 
     #Bananas
+    # BANANANANA
     moneyA = [initial]
 
     while moneyA[-1] > 0 and moneyA[-1] < 2 * initial:
